@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>凑单品</title>
+    <link rel="stylesheet" href="css/gsproduct.css">
+</head>
+<body>
+    
+    <div class="head">
+        <a href="javascript:history.go(-1)"></a> 
+        <img src="images//header_app.png" alt="" class="fr header_app">
+        <div class="center">凑单品</div>   
+    </div>   
+
+    <div class="nav">
+        <ul class="clearfix top">
+            <li class=" fl">
+                <a href="#" class=" left">
+                        <p >
+                            <span>京东</span>
+                            <i></i>
+                        </p>
+                    </a>
+            </li>
+           <li class="fl">
+                <a href="#" class=" right">
+                <p >
+                    <span>华北</span>            
+                    <i></i>
+                </p> 
+            </a>
+           </li>
+           <li class="fl">
+                <a href="#" >
+                        <p >
+                            <span>全部价格</span>
+                            <i></i>
+                        </p>
+                    </a>
+                </li>
+            
+           
+        </ul>
+       
+         <ul class="shopname">
+                <!-- 商店名称坑 -->
+            </ul>
+        
+            <ul class="shoparea">
+                <!-- 商品区域坑 -->
+            </ul>
+    </div>
+   
+
+    <div class="main">
+        <ul class="li_list clearfix">
+            <!-- 商品信息 -->
+        </ul>
+
+    </div>
+
+    <div class="bottom">
+
+            <ul class="login">
+                <li class="w30">
+                    <a href="javascript:;">登录</a>
+                </li>
+                <li class="w30">
+                    <a href="javascript:;">注册</a>
+                </li>
+                <li class="w40">
+                    <img src="./images/top.jpg" alt="">
+                    <a href="javascript:;">返回顶部</a>
+                </li>
+            </ul>
+            <div class="app">
+                <a class="phoneApp" href="javascript:;">手机APP下载</a>
+                <a href="javascript:;" class="phone">慢慢买手机版</a>   
+                <a href="javascript:;" class="hand">--掌上比价平台</a>
+            </div>
+            <p class="addr"><a href="javascript;;">m.manmanbuy.com</a></p>
+        </div>
+
+
+<script type="text/html" id="tpl">
+    <!-- 商品模板 -->
+    {{each result as v i}}
+    <li>
+        <a href="#" data-id={{v.shopId}}>{{v.shopName}}</a>
+    </li>
+        
+    {{/each}}
+</script>
+
+<!-- 商品区域模板  -->
+<script type="text/html" id="tpl1">
+    {{each result as v i}}
+    <li>
+        <a href="#" data-id={{v.areaId}}>{{v.areaName}}</a>
+    </li>
+    {{/each}}
+</script>
+
+
+        <!-- 主体内容模板 -->
+<script type="text/html" id="tpl2">
+    {{each result as v i}}
+    
+    <li class=" fl">
+        <a href="javascript:;}">
+        <div class="productImg">
+                <img src="{{v.productImg}}" alt="">
+            </div>
+            <p class="productName one-txt-cut">
+                {{v.productName}}
+            </p> 
+            <p class="productPrice">
+                <span class="fl price">
+                    {{v.productPrice}}
+                </span>
+                <span class="btn fr">
+                    去凑单
+                </span>
+                
+            </p>
+            
+        </a>
+        
+    </li>
+
+    {{/each}}
+</script>
+
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery.lazyload.js"></script>
+    <script src="lib/artTemplate/template.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/gsproduct.js"></script>
+</body>
+</html>

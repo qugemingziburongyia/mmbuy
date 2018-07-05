@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/brand.css">
+</head>
+<body>
+    <div class="head">
+        <img src="images/header_logo.png" alt="" class="fl header_logo">
+        <img src="images//header_app.png" alt="" class="fr header_app">
+    </div>
+    <div class="search">
+            <input type="text" placeholder="请输入你想比价的商品" class="search_inp ">
+            <button class="search_btn ">搜索</button>
+        </div>
+
+        <div class="nav ">
+            <a href="index.html">首页></a>
+            <a href="category.html">全部分类></a>
+        </div>
+
+        <div class="hot"></div>
+    <div id="tenbrand">
+            <ul class="clearfix ten">
+            </ul>
+    </div>
+    <div class="sales"></div>
+    <!-- 销量排行 -->
+    <div class="brandsales">
+        <ul class="clearfix">
+
+        </ul>
+    </div>
+    <div class="newcom"></div>
+    
+    <div class="com">
+        <ul>
+
+        </ul>
+    </div>
+
+    <div class="bottom">
+
+        <ul class="login">
+            <li class="w30">
+                <a href="javascript:;">登录</a>
+            </li>
+            <li class="w30">
+                <a href="javascript:;">注册</a>
+            </li>
+            <li class="w40">
+                <img src="./images/top.jpg" alt="">
+                <a href="javascript:;">返回顶部</a>
+            </li>
+        </ul>
+        <div class="app">
+            <a class="phoneApp" href="javascript:;">手机APP下载</a>
+            <a href="javascript:;" class="phone">慢慢买手机版</a>   
+            <a href="javascript:;" class="hand">--掌上比价平台</a>
+        </div>
+        <p class="addr"><a href="javascript;;">m.manmanbuy.com</a></p>
+    </div>
+    
+    
+
+    <script type="text/html" id="tpl">
+        {{each result as v i}}
+        <li class="item-list">
+            <i class="fl">{{i+1}}</i>
+            <a class="getbrand"  href="javascript:;">
+                <p class="brandName">
+                    {{v.brandName}}
+                </p>
+                <p class='brandInfo'>
+                    {{v.brandInfo}}
+                </p>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+
+    <script type="text/html" id="tpl2">
+        {{each result as v i}}
+             <li>
+                <a href="productdetail.html?productId={{v.productId}}" >
+                    <div class="left fl">
+                        {{#v.productImg}}
+                    </div>    
+                    <div class="right">
+                        <p>{{v.productName}}</p>
+                        <p>{{v.productPrice}}</p>
+                        <p>{{v.productQuote}} {{v.productCom}}</p>
+                    </div>
+                    <p class="star"></p>
+                </a>
+            </li>
+        {{/each}}
+    </script>
+    
+    <script type="text/html" id="tpl3">
+        {{each result as v i}}
+            <li>
+                <div class="up">
+                    <div class="left fl">
+                        {{#productImg}}
+                    </div>
+                    <div class="right">
+                        {{productName}}
+                    </div>
+                </div>
+                <div class="down">
+                    <p class="clearfix">
+                            <span class="fl">{{v.comName}}</span>
+                            <span class="fr">{{v.comTime}}</span>
+                        </p>
+                        <p>{{v.comContent}}</p>
+                </div>
+            </li>
+        {{/each}}
+    </script>
+
+    <script src="lib/jquery//jquery.min.js"></script>
+    <script src="lib/artTemplate/template.js"></script>
+    <script src="./js/common.js"></script>
+   <script src="js/brand.js"></script>
+</body>
+</html>

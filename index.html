@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="head">
+        <img src="images/header_logo.png" alt="" class="fl header_logo">
+        <img src="images//header_app.png" alt="" class="fr header_app">
+    </div>
+    <div class="search">
+        <input type="text" placeholder="请输入你想比价的商品" class="search_inp ">
+        <button class="search_btn ">搜索</button>
+    </div>
+    <div class="nav">
+        <ul class="clearfix nav_list">
+        <!-- 挖个坑 -->
+        </ul>
+    </div>
+    <div class="product">
+        <div class="pro_head">
+            <span class="fl">超值折扣推荐</span>
+            <img class="fr" src="images/more.png" alt="">
+        </div>
+        <div class="pro_sale">
+            <ul class="product_list">
+                <!-- 挖个坑 -->
+            </ul>
+        </div>
+    </div>
+    <div class="discounts">
+        <a href="javascript:;">更多优惠信息 >></a>
+    </div>
+    <div class="brand">
+            <span class="fl">品牌排行</span>
+            <img src="images/more.png" class="fr" alt="">
+        </div>
+    <div class="bottom">
+        
+        <ul class="login">
+            <li class="w30">
+                <a href="javascript:;">登录</a>
+            </li>
+            <li class="w30">
+                <a href="javascript:;">注册</a>
+            </li>
+            <li class="w40">
+                <img src="./images/top.jpg" alt="">
+                <a href="javascript:;">返回顶部</a>
+            </li>
+        </ul>
+        <div class="app">
+            <a class="phoneApp" href="javascript:;">手机APP下载</a>
+            <a href="javascript:;" class="phone">慢慢买手机版</a>   
+            <a href="javascript:;" class="hand">--掌上比价平台</a>
+        </div>
+        <p class="addr"><a href="javascript;;">m.manmanbuy.com</a></p>
+    </div>
+
+<!-- 导航模板 -->
+    <script type="text/html" id="navTpl">
+        {{each result as v i}}
+            <li {{ i>7? 'class=hide' : "" }}>
+                <a href="{{v.titlehref}}" >
+                    {{#v.img}}
+                    <p>{{v.name}}</p>
+                </a>
+            </li>
+        {{/each}}
+    </script>
+
+<!-- 折扣商品模板 -->
+<script type="text/html" id="proTpl">
+    {{each result as v i}}
+        <li class="clearfix">
+            <a href="">
+                <div class="pic fl">
+                    {{#v.productImg2}}
+                </div>
+                <div class="pro_name">
+                    <span class="first">{{v.productName}}</span>
+                    <span class="second">{{v.productPinkage}}</span>
+                </div>    
+                <div class="pro_from">
+                    <span>{{v.productFrom}}</span>
+                    <span>|</span>
+                    <span>{{v.productTime}}</span>
+                    <span class="content fr">
+                        </span>
+                </div>
+                
+            </a>
+        </li>
+    {{/each}}
+</script>
+
+    <script src="lib/jquery//jquery.min.js"></script>
+    <script src="lib/artTemplate/template.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

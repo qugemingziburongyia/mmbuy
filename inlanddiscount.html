@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买-折扣商品详情</title>
+    <link rel="stylesheet" href="css/inlanddiscount.css">
+</head>
+<body>
+    
+    <div class="head">
+        <a href="javascript:history.go(-1)"></a> 
+        <img src="images//header_app.png" alt="" class="fr header_app">
+        <div class="center">国内折扣</div>   
+    </div>   
+
+    <div class="main">
+        <ul class="li_list clearfix">
+
+        </ul>
+
+    </div>
+ 
+
+    <div class="bottom">
+
+            <ul class="login">
+                <li class="w30">
+                    <a href="javascript:;">登录</a>
+                </li>
+                <li class="w30">
+                    <a href="javascript:;">注册</a>
+                </li>
+                <li class="w40">
+                    <img src="./images/top.jpg" alt="">
+                    <a href="javascript:;">返回顶部</a>
+                </li>
+            </ul>
+            <div class="app">
+                <a class="phoneApp" href="javascript:;">手机APP下载</a>
+                <a href="javascript:;" class="phone">慢慢买手机版</a>   
+                <a href="javascript:;" class="hand">--掌上比价平台</a>
+            </div>
+            <p class="addr"><a href="javascript;;">m.manmanbuy.com</a></p>
+        </div>
+
+<script type="text/html" id="tpl">
+    {{each result as v i}}
+    
+    <li class="w50 fl">
+        <a href="discount.html?productId={{v.productId}}">
+        <div class="productImg" data-src={{v.trueImgSrc}}>
+            {{if i < 4}}
+                {{#v.productImg}}
+            {{else}}
+                {{#v.loading}}
+            {{/if}}
+            </div>
+            <p class="productName">
+                {{v.productName}}
+            </p>
+            <p class="productPrice">
+                {{v.productPrice}}
+            </p>
+            <p class="from">
+                <span>{{v.productFrom}}</span>
+                |
+                <span>{{v.productTime}}</span>
+            </p>
+        </a>
+        
+    </li>
+
+    {{/each}}
+</script>
+
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery.lazyload.js"></script>
+    <script src="lib/artTemplate/template.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/inlanddiscount.js"></script>
+</body>
+</html>

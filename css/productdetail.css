@@ -1,0 +1,536 @@
+@charset "UTF-8";
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+a {
+  background-color: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 1em 40px;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+}
+optgroup {
+  font-weight: bold;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 26px;
+  font-family: "Microsoft YaHei", sans-serif;
+  background-color: #f1f1f1;
+}
+a {
+  text-decoration: none;
+  color: #000;
+  -webkit-tap-highlight-color: transparent;
+}
+ul,
+ol {
+  list-style: none;
+}
+li {
+  list-style: none;
+}
+button,
+input[type='text'],
+input[type='search'],
+input[type="button"],
+textarea {
+  border: none;
+  outline: none;
+  resize: none;
+  -webkit-appearance: none;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
+  display: block;
+}
+.clearfix::after {
+  clear: both;
+}
+.clearfix::before {
+  display: table;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 320px) {
+  html {
+    font-size: 17.06666667px;
+  }
+}
+@media (min-width: 360px) {
+  html {
+    font-size: 19.2px;
+  }
+}
+@media (min-width: 375px) {
+  html {
+    font-size: 20px;
+  }
+}
+@media (min-width: 384px) {
+  html {
+    font-size: 20.48px;
+  }
+}
+@media (min-width: 400px) {
+  html {
+    font-size: 21.33333333px;
+  }
+}
+@media (min-width: 414px) {
+  html {
+    font-size: 22.08px;
+  }
+}
+@media (min-width: 424px) {
+  html {
+    font-size: 22.61333333px;
+  }
+}
+@media (min-width: 480px) {
+  html {
+    font-size: 25.6px;
+  }
+}
+@media (min-width: 540px) {
+  html {
+    font-size: 28.8px;
+  }
+}
+@media (min-width: 640px) {
+  html {
+    font-size: 34.13333333px;
+  }
+}
+@media (min-width: 720px) {
+  html {
+    font-size: 38.4px;
+  }
+}
+@media (min-width: 750px) {
+  html {
+    font-size: 40px;
+  }
+}
+.head {
+  width: 100%;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  background: #ff841d;
+  overflow: hidden;
+  padding-left: 0.75rem;
+}
+.head .header_logo {
+  width: 9.45rem;
+  height: 1.375rem;
+  margin-top: 0.5rem;
+}
+.head .header_app {
+  width: 1.9rem;
+  height: 1.75rem;
+  margin: 0.325rem;
+}
+.search {
+  height: 2.5rem;
+  padding: 0.5rem;
+  position: relative;
+  background-color: #fff;
+}
+.search .search_inp {
+  width: 14.25rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  border-radius: 0.75rem;
+  background-color: #f1f1f1;
+  font-size: 0.6rem;
+  padding-left: 0.9rem;
+  position: absolute;
+  left: 0.5rem;
+  top: 0.5rem;
+}
+.search .search_btn {
+  width: 3.175rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  border-radius: 0.75rem;
+  background-color: #ff841d;
+  color: #fff;
+  font-size: 0.9rem;
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+}
+.bottom {
+  height: 6.05rem;
+}
+.bottom .login {
+  height: 1.7rem;
+  line-height: 1.7rem;
+  border-top: 2px solid #dedede;
+  border-bottom: 2px solid #dedede;
+  text-align: center;
+}
+.bottom .login li {
+  float: left;
+}
+.bottom .login li a {
+  font-size: 0.65rem;
+}
+.bottom .login .w30 {
+  width: 30%;
+  border-right: 2px solid #dedede;
+}
+.bottom .login .w40 {
+  width: 40%;
+}
+.bottom .app {
+  font-size: 0.6rem;
+  padding-top: 0.65rem;
+  line-height: 0.95rem;
+  text-align: center;
+}
+.bottom .app .phoneApp {
+  color: #fe263a;
+}
+.bottom .app .hand {
+  color: #5f646b;
+}
+.bottom .addr {
+  height: 0.875rem;
+  line-height: 0.875rem;
+  text-align: center;
+}
+.bottom .addr a {
+  color: #5f646b;
+  font-size: 0.6rem;
+}
+.nav {
+  height: 1.75rem;
+  line-height: 1.75rem;
+  padding: 0 0.3rem;
+  background-image: linear-gradient(to bottom, #fcfcfc, #ececec);
+}
+.nav a {
+  font-size: 0.8rem;
+}
+.nav .right button {
+  width: 3.175rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  border: 1px solid #dedede;
+  border-radius: 0.25rem;
+  background-image: linear-gradient(to bottom, #dbdbdb, #e1e1e1);
+  font-size: 0.8rem;
+}
+.product {
+  height: 12.5rem;
+  padding: 0.75rem;
+  position: relative;
+  background-color: #fff;
+}
+.product .pro_name {
+  font-size: 0.8rem;
+  color: #000;
+  text-align: center;
+}
+.product .pro_img {
+  width: 9.25rem;
+  height: 9.1rem;
+  margin: 0 auto;
+}
+.product .pro_img img {
+  width: 100%;
+}
+.product .pro_col {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.tabs .w33 {
+  height: 1.625rem;
+  float: left;
+  width: 33.33%;
+  text-align: center;
+  border: 1px solid #bd3f05;
+}
+.tabs .w33 a {
+  display: block;
+  height: 100%;
+  line-height: 1.65rem;
+  color: #fff;
+  font-size: 0.7rem;
+}
+.tabs .buy {
+  border-left: none;
+  background-color: #ff9a17;
+}
+.tabs .params {
+  border-left: none;
+  border-right: none;
+  background-color: #fec938;
+}
+.tabs .com {
+  border-right: none;
+  background-color: #fec938;
+}
+.tips {
+  font-size: 0.6rem;
+  background-color: #fff;
+}
+.tips .tips_a {
+  height: 2.25rem;
+  line-height: 2.25rem;
+  padding-right: 0.2rem;
+  border-bottom: 2px solid #dedede;
+}
+.tips .tips_a .left {
+  padding-left: 1.5rem;
+}
+.tips .tips_a .left span {
+  color: #000;
+}
+.tips .tips_a .right .price {
+  color: #cb0d1a;
+  margin-right: 0.75rem;
+}
+.tips .tips_a .right input {
+  width: 2.8rem;
+  height: 1.1rem;
+  border-radius: 0.2rem;
+  background-color: #ff5500;
+  color: #fff;
+}
+.tips .tips_b {
+  height: 3rem;
+  color: #7e787c;
+  padding: 20px;
+}
+.coms {
+  padding-bottom: 1.25rem;
+  background-color: #fff;
+}
+.coms .top {
+  height: 1.9rem;
+  line-height: 1.9rem;
+  text-align: center;
+  font-size: 0.65rem;
+  background: #dbdbdb;
+  border-top: 3px solid #696969;
+}
+.coms .user_com {
+  font-size: 0.5rem;
+  position: relative;
+}
+.coms .user_com li {
+  padding: 20px;
+  border-bottom: 1px solid #dedede;
+}
+.coms .user_com li span {
+  color: #7e787c;
+}
+.coms .user_com li .comFrom {
+  text-align: right;
+  color: #7e787c;
+}
+.coms .user_com li .comContent {
+  color: #000;
+}
+.coms .btn_box {
+  margin-top: 0.75rem;
+}
+.coms .btn_box button {
+  display: block;
+  height: 1.75rem;
+  line-height: 1.75rem;
+  width: 17.875rem;
+  background-color: #e4e4e4;
+  text-align: center;
+  margin: 0 auto;
+}

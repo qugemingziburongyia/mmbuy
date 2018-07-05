@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买-商品列表</title>
+    <link rel="stylesheet" href="./css/productList.css">
+</head>
+<body>
+        <div class="head">
+            <img src="images/header_logo.png" alt="" class="fl header_logo">
+            <img src="images//header_app.png" alt="" class="fr header_app">
+        </div>
+        <div class="search">
+            <input type="text" placeholder="请输入你想比价的商品" class="search_inp ">
+            <button class="search_btn ">搜索</button>
+        </div>
+
+        <div class="nav">
+            <div class="fl left">
+                <a href="index.html">首页></a>
+                <a href="category.html">全部分类></a>
+                <a href="javascript:;" class="categoryId">
+                    <!-- 分类名称 -->
+                </a>
+            </div>
+            <div class="fr right">
+                <button>筛选</button>
+            </div>
+        </div>
+
+        <div class="content clearfix">
+            <ul>
+                <!-- <li>
+                    <a href="#">
+                            <div class="left fl">
+                                    <img src="" alt="">
+                                </div>    
+                                <div class="right">
+                                    <p>11</p>
+                                    <p>22</p>
+                                    <p>33</p>
+                                </div>
+                    </a>
+                </li> -->
+            </ul>
+        </div>
+        
+        <!-- 分页 -->
+        <div class="paginator">
+            <button class="prev w33">上一页</button>
+            <select name="" id="" class="page w33 ">
+            </select>
+            <button class="next w33">下一页</button>
+        </div>
+
+        <div class="bottom">
+            <ul class="login">
+                <li class="w30">
+                    <a href="javascript:;">登录</a>
+                </li>
+                <li class="w30">
+                    <a href="javascript:;">注册</a>
+                </li>
+                <li class="w40">
+                    <img src="./images/top.jpg" alt="">
+                    <a href="javascript:;">返回顶部</a>
+                </li>
+            </ul>
+            <div class="app">
+                <a class="phoneApp" href="javascript:;">手机APP下载</a>
+                <a href="javascript:;" class="phone">慢慢买手机版</a>   
+                <a href="javascript:;" class="hand">--掌上比价平台</a>
+            </div>
+            <p class="addr"><a href="javascript;;">m.manmanbuy.com</a></p>
+        </div>
+
+
+        <script type="text/html" id="tpl">
+            <!-- 获取分类名称 -->
+            {{each result as v i}}
+                {{v.category}}
+            {{/each}}
+        </script>
+
+    <script type="text/html" id="tpl2">
+        {{each result as v i}}
+             <li>
+                <a href="productdetail.html?productId={{v.productId}}&brandName={{v.brandName}}&category={{category}}">
+                    <div class="left fl">
+                        {{#v.productImg}}
+                    </div>    
+                    <div class="right">
+                        <p>{{v.productName}}</p>
+                        <p>{{v.productPrice}}</p>
+                        <p>{{v.productQuote}} {{v.productCom}}</p>
+                    </div>
+                </a>
+            </li>
+        {{/each}}
+    </script>
+
+    <script src="./lib/artTemplate/template.js"></script>
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/productList.js"></script>
+</body>
+</html>

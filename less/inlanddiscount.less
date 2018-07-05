@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+@import "normalize";
+
+@import "base";
+
+@import "adaptor";
+
+@import "common";
+
+.head {
+    padding-left:0;
+    a {
+        float: left;
+        width: 2.5rem;
+        height: 2.5rem;
+        background: url(../images/right.svg) no-repeat center center;
+        background-size:50%;
+    }
+    .center {
+        font-size: 1.1rem;
+        overflow: hidden;
+        color:#fff;
+        text-align:center;
+        font-weight:600;
+    }
+}
+
+.main {
+    background: #fff;
+    .w50 {
+        width: 50%;
+        height: 13.2rem;
+        .productImg {
+            width: 9.375rem;
+            height: 8.45rem;
+            padding:0.5rem;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .productName {
+            font-size: 0.7rem; 
+            padding:0 0.5rem;  
+        }
+        .productPrice {
+            font-size: 0.55rem;
+            color:#ff6f3e;
+            padding:0 0.5rem;  
+        }
+        .from {
+                font-size: 0.6rem;
+                color:#999ba8;
+                padding:0 0.5rem;  
+        }
+    }
+}

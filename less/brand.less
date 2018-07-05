@@ -1,0 +1,185 @@
+@charset "UTF-8";
+
+@import "normalize";
+
+@import "base";
+
+@import "adaptor";
+
+@import "common";
+
+.nav {
+    height: 1.75rem;
+    line-height: 1.75rem;
+    padding:0 0.3rem;
+    background-image: linear-gradient(to bottom ,#fcfcfc,#ececec);
+    a {
+        font-size: 0.65rem;
+    }
+  
+}
+
+.hot {
+    height: 2rem;
+    font-size: 0.75rem;
+    color:#790c01;
+    line-height: 2rem;
+    border-top:2px solid @bdColor;
+    border-bottom:2px solid @bdColor;
+    padding-left: 0.3rem;
+}
+
+#tenbrand {
+    padding-top: 0.5rem;
+    background: #fff;
+    .item-list {
+        border-bottom:1px solid @bdColor;
+        padding-top:0.425rem;
+        padding-left:0.5rem;
+        i {
+            width: 1rem;
+            height: 1rem;
+            line-height: 1rem;
+            text-align:center;
+            background-color: #c9c9c9;
+            font-size: 0.625rem;
+            color:#fff;
+        }
+        .getbrand{
+            display: block;
+            width: 100%;
+            height: 100%;
+            background:url(../images/icon_right.png) no-repeat right center;
+            background-origin:content-box;
+            padding-left: 1rem;
+            padding-right: 10px;
+            .brandName {
+                font-weight:bold;
+                line-height: 1.1rem;
+                color:#0c0302;
+                font-size: 0.75rem;
+            }
+            .brandInfo {
+                font-size: 0.6rem;
+                line-height: 1.1rem;
+                color:#909fa2;
+            }
+
+        }
+        
+    }
+  
+    
+
+}
+
+.sales {
+    height: 2rem;
+    font-size: 0.75rem;
+    color:#790c01;
+    line-height: 2rem;
+    border-top:2px solid @bdColor;
+    border-bottom:2px solid @bdColor;
+    padding-left: 0.3rem;
+}
+
+.brandsales {
+    padding-top:  0.125rem;
+    a{
+        background-color: #fff;
+        display: block;
+        border-bottom:1px solid @bdColor;
+        position: relative;
+        .left {
+            width: 6rem;
+            height: 5.925rem;
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .right {
+            height: 5.925rem;
+            overflow: hidden;
+            padding-top: 0.5rem;
+            font-size: 0.625rem;
+            p:first-child {
+                line-height: 1.175rem;
+                color: #000;
+            }
+            p:nth-child(2) {
+                color: #ec320d;
+            }
+            p:nth-child(3) {
+                font-size: 0.6rem;
+                color: #a5abbb;
+            }
+        }
+        .star{
+            width: 100px;
+            height: 20px;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            background: url(../images/star.1.svg) repeat-x  center;
+            background-size: 20px 20px;
+        }
+    }
+}
+
+.newcom {
+    height: 2rem;
+    font-size: 0.75rem;
+    color:#790c01;
+    line-height: 2rem;
+    border-top:2px solid @bdColor;
+    border-bottom:2px solid @bdColor;
+    padding-left: 0.3rem;
+}
+
+.com {
+    background: #fff;
+    padding-bottom: 0.75rem;
+    .up {
+        .left{
+            width: 6rem;
+            height: 5.925rem;
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .right {
+            height: 5.925rem;
+            overflow: hidden;
+            padding-top: 0.5rem;
+            font-size: 0.625rem;
+            line-height: 1.175rem;
+            color: #000;
+        }
+    
+    }
+    .down {
+        background-color: #ededed;
+        padding:0.5rem;
+        margin:0.55rem;
+        border:1px solid @bdColor;
+        position: relative;
+        &::before {
+            content:"";
+            border:solid transparent;
+            height: 0;
+            position: absolute;
+            width: 0;
+            border-width:11px;
+            border-bottom-color:#ededed;
+            left:30px;
+            top:-22px;
+        }
+    }
+}
+
+
+

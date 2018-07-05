@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢卖-省钱控</title>
+    <link rel="stylesheet" href="css/couponproduct.css">
+</head>
+<body>
+    
+    <div class="head">
+        <a href="javascript:history.go(-1)"></a> 
+        <img src="images//header_app.png" alt="" class="fr header_app">
+        <div class="center">
+
+        </div>   
+        </div>
+
+    <p class="tips">--点餐前出示手机中的优惠券,即可享受优惠--</p>
+
+
+    <div class="pro_sale">
+        <ul class="product_list">
+            <!-- product -->
+        </ul>
+    </div>
+
+
+
+    <div class="bottom">
+
+            <ul class="login">
+                <li class="w30">
+                    <a href="javascript:;">登录</a>
+                </li>
+                <li class="w30">
+                    <a href="javascript:;">注册</a>
+                </li>
+                <li class="w40">
+                    <img src="./images/top.jpg" alt="">
+                    <a href="javascript:;">返回顶部</a>
+                </li>
+            </ul>
+            <div class="app">
+                <a class="phoneApp" href="javascript:;">手机APP下载</a>
+                <a href="javascript:;" class="phone">慢慢买手机版</a>   
+                <a href="javascript:;" class="hand">--掌上比价平台</a>
+            </div>
+            <p class="addr"><a href="javascript;;">m.manmanbuy.com</a></p>
+        </div>
+
+ <!-- 添加模块化 -->
+    <div id="modal">
+        <div class="left">
+        </div>
+        <div class="img">
+            <!-- 动态添加图片 -->
+            <ul class="clearfix imgbox">
+                <!-- <li>
+                    <img src="images/ic_bcj.png" alt="">
+                </li>
+                <li><img src="images/ic_coudanpin.png" alt=""></li>
+                <li><img src="images/ic_cu.png" alt=""></li>
+                <li><img src="images/ic_mall.png" alt=""></li> -->
+                  
+            </ul>
+        </div>
+        <div class="right">
+        </div>
+        <div class="close"></div>
+    </div>
+
+    <!-- 动态添加图片 -->
+    <script type="text/html" id="imgtpl">
+        {{each img as v i}}
+        <li class='fl'>
+            <img src="{{v}}" alt="">
+        </li>
+        {{/each}}
+    </script>
+
+        <!-- 渲染优惠券商品 -->
+    <script type="text/html" id="tpl">
+        {{each result as v i}}
+        <li class="clearfix">
+            <a href="javascript:;" data-id="{{v.couponProductId}}">
+                <div class="pic fl">
+                    {{#v.couponProductImg}}
+                </div>
+                <div class="pro_name">
+                    {{v.couponProductName}}
+                </div>    
+                <div class="pro_price">
+                    {{v.couponProductPrice}}
+                </div>
+                <div class="pro_time">
+                    {{v.couponProductTime}}
+                </div>
+                
+            </a>
+        </li>
+    {{/each}}
+    </script>
+
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/artTemplate/template.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/couponproduct.js"></script>
+</body>
+</html>
